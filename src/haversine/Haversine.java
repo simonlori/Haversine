@@ -28,7 +28,7 @@ public class Haversine {
         double b = a * 1000;
         System.out.println("meter:");
         System.out.println(b);
-        
+        int ab;
         /*double eredmeny,perc,mperc;
         perc = (float) 35/60;
         System.out.println(perc);
