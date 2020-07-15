@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package haversine;
 
 import static haversine.Haversine.R;
@@ -22,29 +21,29 @@ public class NewJFrame extends javax.swing.JFrame {
     public double Fok;
     public double Perc;
     public double MPerc;
-    
+
     public double Fok2;
     public double Perc2;
     public double MPerc2;
-    
+
     public double Fok3;
     public double Perc3;
     public double MPerc3;
-    
+
     public double Fok4;
     public double Perc4;
     public double MPerc4;
-    
+
     final static double R = 6371.16;
-    
-    public double fok1;
+
+    public double fok1 = 0;
     public double fok2;
     public double fok3;
     public double fok4;
-    
+
     public NewJFrame() {
         initComponents();
-        
+
     }
 
     /**
@@ -96,6 +95,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jTextField18 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -206,9 +207,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("Km");
+        jLabel15.setText("km");
 
         jLabel16.setText("m");
+
+        jLabel17.setText("cm");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -287,12 +290,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jButton5)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                    .addComponent(jTextField18)
                     .addComponent(jTextField17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel16))
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -378,7 +383,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
-                .addGap(45, 45, 45))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addContainerGap())
         );
 
         pack();
@@ -398,20 +407,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String a = jTextField1.getText(); 
+        String a = jTextField1.getText();
         Fok = Double.parseDouble(a);
         System.out.println(Fok);
-        
-        String aa = jTextField2.getText(); 
+
+        String aa = jTextField2.getText();
         double b = Double.parseDouble(aa);
-        Perc = (float) b/60;
+        Perc = (float) b / 60;
         System.out.println(Perc);
-        
-        String aaa = jTextField3.getText(); 
+
+        String aaa = jTextField3.getText();
         double bb = Double.parseDouble(aaa);
-        MPerc = (float) bb/3600;
+        MPerc = (float) bb / 3600;
         System.out.println(MPerc);
-        
+
         fok1 = Fok + Perc + MPerc;
         System.out.println(fok1);
         String t = String.valueOf(fok1);
@@ -420,20 +429,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String a = jTextField5.getText(); 
+        String a = jTextField5.getText();
         Fok2 = Double.parseDouble(a);
         System.out.println(Fok2);
-        
-        String aa = jTextField6.getText(); 
+
+        String aa = jTextField6.getText();
         double b = Double.parseDouble(aa);
-        Perc2 = (float) b/60;
+        Perc2 = (float) b / 60;
         System.out.println(Perc2);
-        
-        String aaa = jTextField7.getText(); 
+
+        String aaa = jTextField7.getText();
         double bb = Double.parseDouble(aaa);
-        MPerc2 = (float) bb/3600;
+        MPerc2 = (float) bb / 3600;
         System.out.println(MPerc2);
-        
+
         fok2 = Fok2 + Perc2 + MPerc2;
         System.out.println(fok2);
         String t = String.valueOf(fok2);
@@ -442,20 +451,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        String a = jTextField9.getText(); 
+        String a = jTextField9.getText();
         Fok4 = Double.parseDouble(a);
         System.out.println(Fok4);
-        
-        String aa = jTextField10.getText(); 
+
+        String aa = jTextField10.getText();
         double b = Double.parseDouble(aa);
-        Perc4 = (float) b/60;
+        Perc4 = (float) b / 60;
         System.out.println(Perc4);
-        
-        String aaa = jTextField11.getText(); 
+
+        String aaa = jTextField11.getText();
         double bb = Double.parseDouble(aaa);
-        MPerc4 = (float) bb/3600;
+        MPerc4 = (float) bb / 3600;
         System.out.println(MPerc4);
-        
+
         fok4 = Fok4 + Perc4 + MPerc4;
         System.out.println(fok4);
         String t = String.valueOf(fok4);
@@ -476,20 +485,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        String a = jTextField13.getText(); 
+        String a = jTextField13.getText();
         Fok3 = Double.parseDouble(a);
         System.out.println(Fok3);
-        
-        String aa = jTextField14.getText(); 
+
+        String aa = jTextField14.getText();
         double b = Double.parseDouble(aa);
-        Perc3 = (float) b/60;
+        Perc3 = (float) b / 60;
         System.out.println(Perc3);
-        
-        String aaa = jTextField15.getText(); 
+
+        String aaa = jTextField15.getText();
         double bb = Double.parseDouble(aaa);
-        MPerc3 = (float) bb/3600;
+        MPerc3 = (float) bb / 3600;
         System.out.println(MPerc3);
-        
+
         fok3 = Fok3 + Perc3 + MPerc3;
         System.out.println(fok3);
         String t = String.valueOf(fok3);
@@ -502,16 +511,47 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        double a = getDistance(fok1,fok3,fok2,fok4);
-        System.out.println(fok1);
-        System.out.println(fok2);
-        System.out.println(fok3);
-        System.out.println(fok4);
-        System.out.println(a);
-        String t = String.valueOf(new DecimalFormat("##.####").format(a));
-        jTextField17.setText(t);
-        String tt = String.valueOf(new DecimalFormat("##.####").format(a*1000));
-        jTextField18.setText(tt);
+        if (fok1 != 0) {
+
+            double a = getDistance(fok1, fok3, fok2, fok4);
+            System.out.println(fok1);
+            System.out.println(fok2);
+            System.out.println(fok3);
+            System.out.println(fok4);
+            System.out.println(a);
+            String t = String.valueOf(new DecimalFormat("##.####").format(a));
+            jTextField17.setText(t);
+            String tt = String.valueOf(new DecimalFormat("##.####").format(a * 1000));
+            jTextField18.setText(tt);
+            String ttt = String.valueOf(new DecimalFormat("##.####").format(a * 100000));
+            jTextField19.setText(ttt);
+
+        } else {
+
+            String lat1 = jTextField4.getText();
+            double la1 = Double.parseDouble(lat1);
+            String lon1 = jTextField8.getText();
+            double lo1 = Double.parseDouble(lon1);
+            String lat2 = jTextField16.getText();
+            double la2 = Double.parseDouble(lat2);
+            String lon2 = jTextField12.getText();
+            double lo2 = Double.parseDouble(lon2);
+
+            double v = getDistance(la1, la2, lo1, lo2);
+            System.out.println(la1);
+            System.out.println(lo1);
+            System.out.println(la2);
+            System.out.println(lo2);
+            System.out.println(v);
+
+            String t = String.valueOf(new DecimalFormat("##.####").format(v));
+            jTextField17.setText(t);
+            String tt = String.valueOf(new DecimalFormat("##.####").format(v * 1000));
+            jTextField18.setText(tt);
+            String ttt = String.valueOf(new DecimalFormat("##.####").format(v * 100000));
+            jTextField19.setText(ttt);
+
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -540,7 +580,7 @@ public class NewJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -548,20 +588,20 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
     }
-    
+
     /*public static double getDistance(double lat1, double lat2, double lon1, double lon2){
-        double dLon = Math.toRadians(lon2-lon1);
-        double dLat = Math.toRadians(lat2-lat1);
+     double dLon = Math.toRadians(lon2-lon1);
+     double dLat = Math.toRadians(lat2-lat1);
  
-        double a = (Math.sin(dLat / 2) * Math.sin(dLat / 2)) +
-                (Math.cos(Math.toRadians(lat1))) *
-                        (Math.cos(Math.toRadians(lat2))) *
-                        (Math.sin(dLon / 2)) *
-                        (Math.sin(dLon / 2));
-        double angle = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double result = angle * R;
-        return result;
-    }*/
+     double a = (Math.sin(dLat / 2) * Math.sin(dLat / 2)) +
+     (Math.cos(Math.toRadians(lat1))) *
+     (Math.cos(Math.toRadians(lat2))) *
+     (Math.sin(dLon / 2)) *
+     (Math.sin(dLon / 2));
+     double angle = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+     double result = angle * R;
+     return result;
+     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -577,6 +617,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -596,6 +637,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
