@@ -26,7 +26,7 @@ import org.w3c.dom.NodeList;
  *
  * @author Lori
  */
-public class Haversine {
+public class Tavolsagszamitas {
 
     final static double R = 6371.16;
 
@@ -294,9 +294,9 @@ public class Haversine {
         double dLat = Math.toRadians(lat2 - lat1);
 
         double a = (Math.sin(dLat / 2) * Math.sin(dLat / 2)) + (Math.cos(Math.toRadians(lat1))) * (Math.cos(Math.toRadians(lat2))) * (Math.sin(dLon / 2)) * (Math.sin(dLon / 2));
-        double angle = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double result = angle * R;
-        return result;
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        double d = c * R;
+        return d;
     }
     
     public static double tavolsagKoszinusz (double lat1, double lat2, double lon1, double lon2){
@@ -305,7 +305,7 @@ public class Haversine {
         double dLon = Math.toRadians(lon2 - lon1);
         
         double a = Math.acos((Math.sin(Lat1) * Math.sin(Lat2)) + Math.cos(Lat1) * Math.cos(Lat2) * Math.cos(dLon));
-        double result = a * R;
-        return result;
+        double d = a * R;
+        return d;
     }
 }

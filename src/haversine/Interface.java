@@ -5,16 +5,18 @@
  */
 package haversine;
 
-import static haversine.Haversine.R;
-import static haversine.Haversine.tavolsagHaversine;
-import static haversine.Haversine.tavolsagKoszinusz;
+//import static havTavolsagszamitasversine.tavolsagHaversine;
+import static haversine.Tavolsagszamitas.R;
+import static haversine.Tavolsagszamitas.tavolsagHaversine;
+import static haversine.Tavolsagszamitas.tavolsagKoszinusz;
 import java.text.DecimalFormat;
+//import staTavolsagszamitassine.Haversine.tavolsagKoszinusz;
 
 /**
  *
  * @author Lori
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class Interface extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
@@ -42,7 +44,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public double fok3;
     public double fok4;
 
-    public NewJFrame() {
+    public Interface() {
         initComponents();
 
     }
@@ -653,20 +655,20 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new Interface().setVisible(true);
             }
         });
     }
